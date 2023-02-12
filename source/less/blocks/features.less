@@ -1,0 +1,124 @@
+.features {
+  background-color: #ffffff;
+  color: #333333;
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 248px;
+    margin-top: -250px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 20px;
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 80px;
+    margin-left: 0;
+  }
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 66px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-left: 72px;
+    background-position: 0 0;
+    margin-bottom: 0;
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 78px;
+    padding-left: 0;
+    background-position: 50% 0;
+    width: 317px;
+    align-items: center;
+  }
+
+  &--speed {
+    background-image: url("../../img/svg/features-1.svg");
+    background-size: 50px 56px;
+  }
+
+  &--convenience {
+    background-image: url("../../img/svg/features-2.svg");
+    background-size: 52px 56px;
+  }
+
+  &--cheerfulness {
+    background-image: url("../../img/svg/features-3.svg");
+    background-size: 42px 56px;
+  }
+
+  &--eco {
+    background-image: url("../../img/svg/features-4.svg");
+    background-size: 46 px 56px;
+  }
+}
+
+.features__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.features__description {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
+}

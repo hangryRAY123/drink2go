@@ -1,0 +1,154 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 0;
+    margin-right: 30px;
+  }
+}
+
+.filters__group {
+  margin-bottom: 25px;
+
+  &:nth-of-type(2) {
+    margin-bottom: 22px;
+  }
+
+  &:nth-of-type(3) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 220px;
+
+    &:nth-of-type(1) {
+      margin-right: 22px;
+    }
+
+    &:nth-of-type(2) {
+      margin-right: 38px;
+      margin-bottom: 0;
+    }
+
+    &:nth-of-type(3) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:nth-of-type(1) {
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+
+    &:nth-of-type(3) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.filters__legend {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.filters__item {
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.filters__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 233px;
+    margin-top: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.filters__submit {
+  font-weight: 400;
+  font-size: 13px;
+  min-width: 160px;
+  padding: 10px 0;
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    min-width: 148px;
+    margin-bottom: 0;
+    margin-right: 30px;
+    padding: 8px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
+  }
+}
+
+.filters__reset {
+  font-weight: 400;
+  font-size: 14px;
+  min-width: 160px;
+  padding: 10px 0;
+  background-color: #ffffff;
+  color: #7859cf;
+
+  @media (min-width: @tablet-width) {
+    min-width: 138px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 150px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #ffffff;
+  }
+
+  &:disabled {
+    color: #ffffff;
+    background-color: #e2e2e2;
+  }
+}

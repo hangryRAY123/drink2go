@@ -1,0 +1,119 @@
+.navigation-site {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 30px;
+  }
+}
+
+.navigation-site__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 16px;
+  height: 12px;
+  padding: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &:active {
+    background-color: #f0ebff;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.navigation-site--closed .navigation-site__toggle::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 1.5px;
+  top: 25px;
+  right: 22px;
+  background-color: #333333;
+  box-shadow: 0 4px 0 0 #333333, 0 8px 0 0 #333333;
+  transition: 0.5s;
+}
+
+.navigation-site--opened .navigation-site__toggle {
+  top: 0;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 1.5px;
+    background-color: #333333;
+    right: 20px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+    transition: 0.5s;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    transition: 0.5s;
+  }
+}
+
+.navigation-site--closed .navigation-site__list {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.navigation-site__list {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #ffffff;
+  z-index: 100;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    flex-direction: row;
+  }
+}
+
+.navigation-site--nojs .navigation-site__toggle {
+  display: none;
+}
+
+.navigation-site--nojs .navigation-site__list {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    flex-direction: row;
+  }
+}

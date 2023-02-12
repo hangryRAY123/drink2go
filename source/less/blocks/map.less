@@ -1,0 +1,38 @@
+.map {
+  position: relative;
+  background-image: image-set(
+    url("../../img/map.jpg") 1x,
+    url("../../img/map.webp") 1x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 420px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(
+      url("../../img/map@2x.jpg") 2x,
+      url("../../img/map@2x.webp") 2x
+    );
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 540px;
+  }
+}
+
+.map__leaflet {
+  height: 420px;
+
+  @media (min-width: @tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 540px;
+  }
+}

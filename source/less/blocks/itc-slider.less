@@ -1,0 +1,148 @@
+.itc-slider {
+  position: relative;
+}
+
+.itc-slider__wrapper {
+  overflow: visible;
+  overflow-x: clip;
+}
+
+.itc-slider__items {
+  display: flex;
+  transition: transform 0.5s;
+  will-change: transform;
+}
+
+.itc-slider__transition-none {
+  transition: none;
+}
+
+.itc-slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  user-select: none;
+  will-change: transform;
+}
+
+.itc-slider__btn {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 100%;
+  color: #ffffff;
+  text-align: center;
+  background: transparent;
+  border: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+.itc-slider__btn_hide {
+  display: none;
+}
+
+.itc-slider__btn_prev {
+  left: -20px;
+
+  @media (min-width: @tablet-width) {
+    top: 36%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 50%;
+    left: -40px;
+  }
+}
+
+.itc-slider__btn_next {
+  right: -20px;
+
+  @media (min-width: @tablet-width) {
+    top: 36%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 50%;
+    right: -40px;
+  }
+}
+
+.itc-slider__btn:focus,
+.itc-slider__btn:hover {
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  outline: none;
+}
+
+.itc-slider__btn:active {
+  background: linear-gradient(
+    90deg,
+    rgba(120, 89, 207, 0.25) 0%,
+    rgba(120, 89, 207, 0) 100%
+  );
+}
+
+.itc-slider__btn::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 20px;
+  background: center center/100% 100% no-repeat;
+}
+
+.itc-slider__btn_prev::before {
+  background-image: url("../../img/svg/slider.svg");
+}
+
+.itc-slider__btn_next::before {
+  transform: rotate(180deg);
+  background-image: url("../../img/svg/slider.svg");
+}
+
+.itc-slider__indicators {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    margin: 0 15%;
+    padding-left: 0;
+    margin-bottom: 70px;
+  }
+}
+
+.itc-slider__indicator {
+  flex: 0 1 auto;
+  box-sizing: content-box;
+  width: 62px;
+  height: 4px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+
+.itc-slider__indicator_active {
+  background-color: #7859cf;
+}

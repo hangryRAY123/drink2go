@@ -1,0 +1,19 @@
+/* stylelint-disable at-rule-no-unknown */
+@tablet-width: 768px;
+@desktop-width: 1440px;
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px;
+    width: 1440px;
+  }
+}
