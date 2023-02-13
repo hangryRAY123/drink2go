@@ -79,6 +79,18 @@
 .range__wrapper-inputs {
   display: flex;
   justify-content: space-between;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: flex;
+    width: 9px;
+    height: 2px;
+    background-color: #bdbdbd;
+    top: 50%;
+    left: 49%;
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: 7px;
